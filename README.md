@@ -2,6 +2,7 @@
 
 Aplicación sencilla realizada con el curso de Fernando Herrera de React: De cero a experto ( Hooks y MERN ) https://www.udemy.com/course/react-cero-experto
 
+- Creación de app con Vita
 - Implementación de los siguientes conociemientos:
 - Custom Hooks
 - Fetch hacia un API
