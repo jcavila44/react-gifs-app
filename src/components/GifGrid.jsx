@@ -1,20 +1,24 @@
 
 import PropTypes from 'prop-types';
-import { fetchGetGifs } from '../helpers/getGifs';
-import { useEffect } from 'react';
+import { GifITem } from './GifITem';
+import { useFetchGifs } from '../hooks/useFetchGifs';
 
 
 
 
 export const GifGrid = ({ category }) => {
 
-    useEffect(() => {
-        fetchGetGifs(category);
-    }, [category]);
+    const { images, isLoading } = useFetchGifs(category);
 
     return (
         <>
             <h3>{category}</h3>
+            {isLoading && <h2>Cargando...</h2>}
+            <div className='card-grid'>|
+                {
+                    images.map((image) => (<GifITem key={image.id} {...image} />))
+                }
+            </div>
         </>
     )
 }
