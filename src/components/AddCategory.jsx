@@ -19,7 +19,7 @@ export const AddCategory = ({ onNewCategory }) => {
     }
 
     return (
-        <form onSubmit={onSubmitForm}>
+        <form onSubmit={onSubmitForm} aria-label="form">
             <input
                 key={12}
                 type="text"
@@ -33,7 +33,7 @@ export const AddCategory = ({ onNewCategory }) => {
 
 
 AddCategory.propTypes = {
-    onNewCategory: PropTypes.func
+    onNewCategory: PropTypes.func.isRequired
 };
 
 AddCategory.defaultProps = {
